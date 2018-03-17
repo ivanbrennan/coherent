@@ -147,6 +147,8 @@ cnoremap <expr> <M-R> coherent#is_search() ? "\<C-R>" : "\<M-R>"
 cnoremap <expr> <C-R> coherent#is_search() ? "\<C-T>" : "\<C-R>"
 cnoremap <expr> <C-S> coherent#is_search() ? "\<C-G>" : "\<C-S>"
 cnoremap <expr> <C-Y> coherent#is_search() ? "\<C-L>" : "\<C-Y>"
+cnoremap        <C-P> <Up>
+cnoremap        <C-N> <Down>
 
 " :nohlsearch
 nnoremap <silent> <M-U> :nohlsearch<CR>
