@@ -7,8 +7,6 @@ if &cp " avoid setting this twice
   set nocompatible
 endif
 
-set exrc         " enable local .vimrc files
-set secure       " disable unsafe commands in local .vimrc files
 syntax enable
 set synmaxcol=256
 
