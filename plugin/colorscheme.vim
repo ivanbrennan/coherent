@@ -1,4 +1,4 @@
-if exists("g:loaded_coherent_colorscheme") || &cp
+if exists("g:loaded_coherent_colorscheme")
   finish
 endif
 let g:loaded_coherent_colorscheme = 1

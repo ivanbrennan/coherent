@@ -1,4 +1,4 @@
-if exists("g:loaded_coherent_globals") || &cp
+if exists("g:loaded_coherent_globals")
   finish
 endif
 let g:loaded_coherent_globals = 1

@@ -1,4 +1,4 @@
-if exists("g:loaded_coherent_cursor") || &cp
+if exists("g:loaded_coherent_cursor")
   finish
 endif
 let g:loaded_coherent_cursor = 1

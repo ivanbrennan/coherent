@@ -1,4 +1,4 @@
-if exists("g:loaded_coherent_terminal") || &cp
+if exists("g:loaded_coherent_terminal")
   finish
 endif
 let g:loaded_coherent_terminal = 1

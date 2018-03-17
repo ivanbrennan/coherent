@@ -1,4 +1,4 @@
-if exists("g:loaded_coherent_commands") || &cp
+if exists("g:loaded_coherent_commands")
   finish
 endif
 let g:loaded_coherent_commands = 1

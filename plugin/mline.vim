@@ -1,4 +1,4 @@
-if exists("g:loaded_coherent_mline") || &cp
+if exists("g:loaded_coherent_mline")
   finish
 endif
 let g:loaded_coherent_mline = 1

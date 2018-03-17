@@ -1,4 +1,4 @@
-if exists("g:loaded_coherent_keybindings") || &cp
+if exists("g:loaded_coherent_keybindings")
   finish
 endif
 let g:loaded_coherent_keybindings = 1
