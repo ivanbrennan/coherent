@@ -23,8 +23,6 @@ let g:netrw_winsize=20          " preview winsize
 let g:netrw_preview=1           " open previews vertically
 let g:netrw_use_errorwindow=0   " suppress error window
 
-let g:edot_vimrc = glob(resolve($HOME.'/.vim/vimrc-before.vim'))
-
 let g:optcycle_config = {
 \   'colorscheme': [
 \     { 'colorscheme': 'root' },
