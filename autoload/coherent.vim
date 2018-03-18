@@ -38,7 +38,7 @@ endf
 
 func! coherent#complete_or_indent(int)
   " complete if popup-menu displayed
-  if pumvisible() | return s:complete() | endif
+  if pumvisible() | return s:complete(a:int) | endif
 
   let line = getline('.')  " current line
   let col  = col('.') - 1  " current 0-indexed column
