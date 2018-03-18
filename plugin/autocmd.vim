@@ -1,6 +1,4 @@
-if exists("g:loaded_coherent_autocmd")
-  finish
-endif
+if exists("g:loaded_coherent_autocmd") | finish | endif
 let g:loaded_coherent_autocmd = 1
 
 augroup Mline

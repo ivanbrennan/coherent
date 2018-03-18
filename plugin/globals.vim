@@ -1,6 +1,4 @@
-if exists("g:loaded_coherent_globals")
-  finish
-endif
+if exists("g:loaded_coherent_globals") | finish | endif
 let g:loaded_coherent_globals = 1
 
 let g:is_bash=1             " sh is bash

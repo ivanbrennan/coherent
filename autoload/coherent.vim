@@ -1,6 +1,4 @@
-if exists("g:autoloaded_coherent") || &cp
-  finish
-endif
+if exists("g:autoloaded_coherent") | finish | endif
 let g:autoloaded_coherent = 1
 
 fun! coherent#is_search()

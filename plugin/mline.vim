@@ -1,6 +1,4 @@
-if exists("g:loaded_coherent_mline")
-  finish
-endif
+if exists("g:loaded_coherent_mline") | finish | endif
 let g:loaded_coherent_mline = 1
 
 setg statusline=\                            " space

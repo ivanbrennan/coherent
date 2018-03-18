@@ -1,6 +1,4 @@
-if exists("g:loaded_coherent_keybindings")
-  finish
-endif
+if exists("g:loaded_coherent_keybindings") | finish | endif
 let g:loaded_coherent_keybindings = 1
 
 " Equivalent to 'let mapleader=" "' but prevents

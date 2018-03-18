@@ -1,6 +1,4 @@
-if exists("g:loaded_coherent_terminal")
-  finish
-endif
+if exists("g:loaded_coherent_terminal") | finish | endif
 let g:loaded_coherent_terminal = 1
 
 if has('nvim')

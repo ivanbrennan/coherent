@@ -1,6 +1,4 @@
-if exists("g:loaded_coherent_colorscheme")
-  finish
-endif
+if exists("g:loaded_coherent_colorscheme") | finish | endif
 let g:loaded_coherent_colorscheme = 1
 
 if has('termguicolors')

@@ -1,6 +1,4 @@
-if exists("g:autoloaded_coherent_mline") || &cp
-  finish
-endif
+if exists("g:autoloaded_coherent_mline") | finish | endif
 let g:autoloaded_coherent_mline = 1
 
 func! mline#current() abort

@@ -1,6 +1,4 @@
-if exists("g:loaded_coherent_cursor")
-  finish
-endif
+if exists("g:loaded_coherent_cursor") | finish | endif
 let g:loaded_coherent_cursor = 1
 
 set cursorline

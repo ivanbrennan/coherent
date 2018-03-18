@@ -1,6 +1,4 @@
-if exists("g:autoloaded_coherent_specsetup")
-  finish
-endif
+if exists("g:autoloaded_coherent_specsetup") | finish | endif
 let g:autoloaded_coherent_specsetup = 1
 
 func! specsetup#vmux()
