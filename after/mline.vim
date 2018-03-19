@@ -27,7 +27,11 @@ setg statusline+=%=                          " separator
 
 setg statusline+=\                           " space
 setg statusline+=%{toupper(&fenc)}           " encoding
-setg statusline+=%(\ \ %{mline#branch()}%)   " branch
+
+if exists('*fugitive#head')
+  setg statusline+=%(\ \ %{mline#branch()}%) " branch
+endif
+
 setg statusline+=\ \                         " spaces
 
 setg statusline+=%l:                         " line:
