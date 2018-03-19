@@ -55,7 +55,7 @@ cnoremap <C-@>          <lt>leader>
 cnoremap <C-Space>      <lt>leader>
 
 cnoremap <expr> <C-D>   getcmdpos() > strlen(getcmdline()) ? "\<C-D>" : "\<Del>"
-cnoremap <expr> :       getcmdpos() == 1 && getcmdtype() == ':' ? "\<Up>" : ":"
+cnoremap <expr> :       coherent#cmdline_colon()
 
 " add blank line above / below
 nnoremap <silent> <S-CR>    :call append(line(.) - 1, '')<CR>

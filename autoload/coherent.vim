@@ -6,6 +6,19 @@ fun! coherent#is_search()
   return x == '/' || x == '?'
 endf
 
+func! coherent#cmdline_colon()
+  return s:cmdline_first_char() ? "\<Up>" : ":"
+endf
+
+func! s:cmdline_first_char()
+  if getcmdtype() == ':'
+    " first column, or first column following "'<,'>" visual range
+    return getcmdpos() == 1 || (getcmdpos() == 6 && getcmdline() == "'<,'>")
+  else
+    return 0
+  endif
+endf
+
 func! coherent#foldtext()
   let l:text =  '+'
   let l:text .= substitute(v:folddashes, '-', '·', 'g')
