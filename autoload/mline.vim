@@ -9,7 +9,6 @@ let g:autoloaded_coherent_mline = 1
 func! mline#init()
   call s:init_statusline()
   call s:init_autocommands()
-  " call mline#update_highlight()
 endf
 
 func! s:init_statusline()
@@ -51,6 +50,8 @@ func! s:init_statusline()
   setg statusline+=%v                          " column
   setg statusline+=%*                          " reset highlight group
   setg statusline+=\                           " space
+
+  call mline#update_highlight()
 endf
 
 func! s:init_autocommands()
