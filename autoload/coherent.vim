@@ -49,49 +49,6 @@ func! coherent#nexttextobject(motion)
   execute "normal! f" . c . "v" . a:motion . c
 endf
 
-func! coherent#complete_or_indent(int)
-  " complete if popup-menu displayed
-  if pumvisible() | return s:complete(a:int) | endif
-
-  let line = getline('.')  " current line
-  let col  = col('.') - 1  " current 0-indexed column
-
-  if a:int > 0 && (!s:finishing_word(line, col) || s:want_tab())
-    return s:indent()
-  endif
-
-  " non-whitespace characters before cursor
-  let prefix = expand(matchstr(line[0:col-1], '\S*$'), 1)
-
-  " complete filename if finishing a path
-  if prefix =~ '^[~/.]' | return "\<C-X>\<C-F>" | endif
-
-  " perform custom completion if possible
-  if !empty(&completefunc) && call(&completefunc, [1, prefix]) >= 0
-    return "\<C-X>\<C-U>"
-  endif
-
-  return s:complete(a:int)
-endf
-
-func! s:finishing_word(line, col)
-  " preceded by word/filename char AND NOT inside word
-  return a:line[a:col-1] =~ '\k\|[/~.]' && a:line[a:col] !~ '\k'
-endf
-
-func! s:want_tab()
-  " this needs to be smarter
-  return ! &expandtab
-endf
-
-func! s:complete(int)
-  return a:int > 0 ? "\<C-N>" : "\<C-P>"
-endf
-
-func! s:indent()
-  return (!empty(&indentexpr) || &cindent) ? "\<C-F>" : "\<Tab>"
-endf
-
 func! coherent#expreffect(side_effect)
   execute a:side_effect
   return ''
