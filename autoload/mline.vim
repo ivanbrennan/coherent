@@ -1,6 +1,66 @@
 if exists("g:autoloaded_coherent_mline") | finish | endif
 let g:autoloaded_coherent_mline = 1
 
+" This initialization is triggered by a VimEnter autocmd event, which
+" occurs after Vim has finished loading vimrc, plugins, packages, etc.
+" This allows colorscheme and any external dependencies to load prior
+" to statusline configuration. Currently fugitive is the only external
+" dependency, though it's optional.
+func! mline#init()
+  call s:init_statusline()
+  call s:init_autocommands()
+  " call mline#update_highlight()
+endf
+
+func! s:init_statusline()
+  setg statusline=\                            " space
+
+  setg statusline+=%1*                         " User1 highlight group (filename)
+  setg statusline+=%{mline#bufname()}          " relative path
+  setg statusline+=%*                          " reset highlight group
+  setg statusline+=%{mline#bufname_nc()}       " relative path (non-current)
+  setg statusline+=\                           " space
+
+  setg statusline+=%#StatusLineNC#             " StatusLineNC highlight group
+  setg statusline+=%{mline#before_filetype()}  " dimmed '['
+  setg statusline+=%2*                         " User2 highlight group (filetype)
+  setg statusline+=%{mline#filetype()}         " filetype (current)
+  setg statusline+=%*                          " reset highlight group
+  setg statusline+=%{mline#filetype_nc()}      " filetype (non-current)
+  setg statusline+=%#StatusLineNC#             " StatusLineNC highlight group
+  setg statusline+=%{mline#after_filetype()}   " dimmed ']'
+  setg statusline+=%*                          " reset highlight group
+  setg statusline+=\                           " space
+
+  setg statusline+=%w                          " preview
+  setg statusline+=%M                          " modified
+
+  setg statusline+=%=                          " separator
+
+  setg statusline+=\                           " space
+  setg statusline+=%{toupper(&fenc)}           " encoding
+
+  if exists('g:loaded_fugitive')
+    setg statusline+=%(\ \ %{mline#branch()}%) " branch
+  endif
+
+  setg statusline+=\ \                         " spaces
+
+  setg statusline+=%l:                         " line:
+  setg statusline+=%#StatusLineNC#             " dim
+  setg statusline+=%v                          " column
+  setg statusline+=%*                          " reset highlight group
+  setg statusline+=\                           " space
+endf
+
+func! s:init_autocommands()
+  augroup Mline
+    autocmd!
+    autocmd ColorScheme * call mline#update_highlight()
+    autocmd BufWinEnter,BufWritePost,FileWritePost,TextChanged,TextChangedI,WinEnter * call mline#check_modified()
+  augroup END
+endf
+
 func! mline#current() abort
   return exists('g:actual_curbuf') && bufnr('%') == g:actual_curbuf
 endf

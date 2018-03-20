@@ -1,12 +1,6 @@
 if exists("g:loaded_coherent_autocmd") | finish | endif
 let g:loaded_coherent_autocmd = 1
 
-augroup Mline
-  autocmd!
-  autocmd VimEnter,ColorScheme * call mline#update_highlight()
-  autocmd BufWinEnter,BufWritePost,FileWritePost,TextChanged,TextChangedI,WinEnter * call mline#check_modified()
-augroup END
-
 augroup Formatting
   autocmd!
   autocmd FileType * execute 'setl formatprg=par\ -w'.(&tw > 0 ? &tw : 90)
