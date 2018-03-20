@@ -132,9 +132,6 @@ vnoremap <Tab>  =
 vnoremap <      <gv
 vnoremap >      >gv
 
-imap <Tab>   <Plug>(tabtab_complete_or_indent+)
-imap <S-Tab> <Plug>(tabtab_complete_or_indent-)
-
 " emacs
 inoremap <C-S>       <C-O>/
 nnoremap U           <C-R>
