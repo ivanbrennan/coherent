@@ -47,8 +47,10 @@ func! s:init()
 endf
 
 if v:vim_did_enter
+  let g:mline_trace = 'if'
   call s:init()
 else
+  let g:mline_trace = 'else'
   augroup Mline
     autocmd!
     autocmd VimEnter * call s:init()
