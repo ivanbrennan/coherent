@@ -51,7 +51,7 @@ func! s:init_statusline()
   setg statusline+=%*                          " reset highlight group
   setg statusline+=\                           " space
 
-  call mline#update_highlight()
+  call mline#update_highlight() | redrawstatus
 endf
 
 func! s:init_autocommands()
