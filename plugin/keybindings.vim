@@ -113,10 +113,10 @@ nnoremap gA          ga
 xnoremap gA          ga
 
 " tag, pop
-nmap     <C-.>       <Plug>(ArticulateTag)
-xmap     <C-.>       <Plug>(ArticulateTag)
-nmap     <C-,>       <Plug>(ArticulatePop)
-xmap     <C-,>       <Plug>(ArticulatePop)
+nmap     <M-.>       <Plug>(ArticulateTag)
+xmap     <M-.>       <Plug>(ArticulateTag)
+nmap     <M-,>       <Plug>(ArticulatePop)
+xmap     <M-,>       <Plug>(ArticulatePop)
 nmap     g.          <Plug>(ArticulateTjump)
 xmap     g.          <Plug>(ArticulateTjump)
 
