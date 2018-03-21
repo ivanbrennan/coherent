@@ -58,8 +58,8 @@ cnoremap <expr> <C-D>   getcmdpos() > strlen(getcmdline()) ? "\<C-D>" : "\<Del>"
 cnoremap <expr> :       coherent#cmdline_colon()
 
 " add blank line above / below
-nnoremap <silent> <S-CR>    :call append(line(.) - 1, '')<CR>
-nnoremap <silent> <C-CR>    :call append(line(.), '')<CR>
+nnoremap <silent> <S-CR>    :call append(line('.') - 1, '')<CR>
+nnoremap <silent> <C-CR>    :call append(line('.'), '')<CR>
 
 " bubble up / down
 nnoremap <silent> <C-Up>    mZ:silent! move .-2<CR>==`Z
