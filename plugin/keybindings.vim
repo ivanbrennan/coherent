@@ -28,15 +28,15 @@ nmap     <leader>u      <Plug>(dirvish_up)
 " quickfix list
 nmap     <C-@>          <Plug>(listical_quickfix)
 nmap     <C-Space>      <Plug>(listical_quickfix)
-nnoremap <M-j>          :cnext<CR>
-nnoremap <M-k>          :cprevious<CR>
+nnoremap <M-n>          :cnext<CR>
+nnoremap <M-p>          :cprevious<CR>
 nnoremap <M-h>          :colder<CR>
 nnoremap <M-l>          :cnewer<CR>
 
 " location list
 nmap     <C-S-Space>    <Plug>(listical_loclist)
-nnoremap <M-J>          :lnext<CR>
-nnoremap <M-K>          :lprevious<CR>
+nnoremap <M-N>          :lnext<CR>
+nnoremap <M-P>          :lprevious<CR>
 nnoremap <M-H>          :lolder<CR>
 nnoremap <M-L>          :lnewer<CR>
 
