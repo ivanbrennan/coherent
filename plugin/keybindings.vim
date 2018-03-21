@@ -60,6 +60,7 @@ cnoremap <expr> :       coherent#cmdline_colon()
 " add blank line above / below
 nnoremap <silent> <S-CR>    :call append(line('.') - 1, '')<CR>
 nnoremap <silent> <C-CR>    :call append(line('.'), '')<CR>
+nnoremap <silent> <M-CR>    :call append(line('.'), '')<CR>
 
 " bubble up / down
 nnoremap <silent> <C-Up>    mZ:silent! move .-2<CR>==`Z
@@ -72,6 +73,7 @@ inoremap <silent> <C-Down>  <Esc>:silent! move .+1<CR>==gi
 " spawn newline
 inoremap <S-CR> <C-O>O
 inoremap <C-CR> <C-O>o
+inoremap <M-CR> <C-O>o
 
 " sensible Y
 nnoremap Y      y$
