@@ -140,7 +140,7 @@ nnoremap U           <C-R>
 nnoremap <C-X><C-U>  U
 nnoremap <C-X>u      U
 
-cnoremap <expr> <M-R> coherent#is_search() ? "\<C-R>" : "\<M-R>"
+cnoremap <expr> <M-r> coherent#is_search() ? "\<C-R>" : "\<M-r>"
 cnoremap <expr> <C-R> coherent#is_search() ? "\<C-T>" : "\<C-R>"
 cnoremap <expr> <C-S> coherent#is_search() ? "\<C-G>" : "\<C-S>"
 cnoremap <expr> <C-Y> coherent#is_search() ? "\<C-L>" : "\<C-Y>"
