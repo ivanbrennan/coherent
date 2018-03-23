@@ -34,7 +34,7 @@ nnoremap <M-h>          :colder<CR>
 nnoremap <M-l>          :cnewer<CR>
 
 " location list
-nmap     <C-S-Space>    <Plug>(listical_loclist)
+nmap     <S-Space>      <Plug>(listical_loclist)
 nnoremap <M-N>          :lnext<CR>
 nnoremap <M-P>          :lprevious<CR>
 nnoremap <M-H>          :lolder<CR>
