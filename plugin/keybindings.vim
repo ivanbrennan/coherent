@@ -25,20 +25,13 @@ nnoremap <leader>bp     :bprevious<CR>
 nnoremap <leader>l      <C-^>
 nmap     <leader>u      <Plug>(dirvish_up)
 
-" quickfix list
-nmap     <C-@>          <Plug>(listical_quickfix)
-nmap     <C-Space>      <Plug>(listical_quickfix)
-nnoremap <M-n>          :cnext<CR>
-nnoremap <M-p>          :cprevious<CR>
-nnoremap <M-h>          :colder<CR>
-nnoremap <M-l>          :cnewer<CR>
-
-" location list
-nmap     <S-Space>      <Plug>(listical_loclist)
-nnoremap <M-N>          :lnext<CR>
-nnoremap <M-P>          :lprevious<CR>
-nnoremap <M-H>          :lolder<CR>
-nnoremap <M-L>          :lnewer<CR>
+" quickfix/loclist
+nmap     <C-@>          <Plug>(listical_toggle)
+nmap     <C-Space>      <Plug>(listical_toggle)
+nmap     <M-n>          <Plug>(listical_next)
+nmap     <M-p>          <Plug>(listical_previous)
+nmap     <M-h>          <Plug>(listical_older)
+nmap     <M-l>          <Plug>(listical_newer)
 
 " cmdline
 noremap  <leader>x      :
