@@ -26,25 +26,6 @@ func! coherent#expreffect(side_effect)
   return ''
 endf
 
-" syntax-highlight helpers
-
-func! coherent#synstack()
-  return map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endf
-
-func! coherent#syntaxhighlights(...)
-  let l:stack  = coherent#synstack()
-  let l:arg    = a:0 ? a:1 : 0
-  let l:offset = max([l:arg, -len(l:stack)])
-
-  exec 'echo expand("<cword>")'
-  exec 'echo " "'
-
-  for name in l:stack[l:offset:]
-    exec 'verbose hi ' . name
-  endfor
-endf
-
 func! coherent#nexttextobject(motion)
   echo
   let c = nr2char(getchar())
