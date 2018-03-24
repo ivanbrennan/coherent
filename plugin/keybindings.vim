@@ -153,7 +153,7 @@ nmap     <leader>3   <Plug>(sohi_light)
 nmap     <leader>#   <Plug>(sohi_lights)
 
 " substitute
-nnoremap <leader>S   :%s/
+nnoremap <M-s>       :%s/
 nnoremap <leader>s   :s/
 vnoremap <leader>s   :s/
 nnoremap c.          *Ncgn
