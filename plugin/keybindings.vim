@@ -170,7 +170,7 @@ noremap <C-A>   0
 
 " splits
 nnoremap <C-D>      <C-W><C-Q>
-noremap  <leader>,  <C-W>p
+noremap  <leader>,  <C-W>w
 noremap  <C-W><C-Y> <C-W>z
 
 " tabs
