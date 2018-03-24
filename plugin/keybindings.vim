@@ -98,6 +98,10 @@ xmap     <leader>;   <Plug>Commentary
 nmap     <leader>;   <Plug>Commentary
 omap     <leader>;   <Plug>Commentary
 nmap     <leader>;;  <Plug>CommentaryLine
+xmap     <M-;>       <Plug>Commentary
+nmap     <M-;>       <Plug>Commentary
+omap     <M-;>       <Plug>Commentary
+nmap     <M-;><M-;>  <Plug>CommentaryLine
 
 " EasyAlign
 nmap     ga          <Plug>(EasyAlign)
