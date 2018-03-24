@@ -34,6 +34,8 @@ nmap     <M-h>          <Plug>(listical_older)
 nmap     <M-l>          <Plug>(listical_newer)
 
 " cmdline
+noremap  ;              :
+noremap  :              ;
 noremap  <leader>x      :
 nnoremap <leader>1      :!
 nnoremap <leader>h      :help 
