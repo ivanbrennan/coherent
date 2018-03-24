@@ -151,6 +151,10 @@ cnoremap        <C-N> <Down>
 nnoremap <silent> <M-U> :nohlsearch<CR>
 nnoremap coh :<C-R>=eval(&hls) ? (v:hlsearch ? 'noh' : 'set nohls') : 'set hls'<CR><CR>
 
+" inspect syntax
+nmap     <leader>3   <Plug>(sohi_light)
+nmap     <leader>#   <Plug>(sohi_lights)
+
 " substitute
 nnoremap <leader>S   :%s/
 nnoremap <leader>s   :s/
