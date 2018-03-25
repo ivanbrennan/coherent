@@ -145,16 +145,11 @@ nnoremap U           <C-R>
 nnoremap <C-X><C-U>  U
 nnoremap <C-X>u      U
 
-cnoremap <expr> <M-r> coherent#is_search() ? "\<C-R>" : "\<M-r>"
-cnoremap <expr> <C-R> coherent#is_search() ? "\<C-T>" : "\<C-R>"
-cnoremap <expr> <C-S> coherent#is_search() ? "\<C-G>" : "\<C-S>"
+cnoremap <expr> <C-P> coherent#is_search() ? "\<C-T>" : "\<Up>"
+cnoremap <expr> <C-N> coherent#is_search() ? "\<C-G>" : "\<Down>"
 cnoremap <expr> <C-Y> coherent#is_search() ? "\<C-L>" : "\<C-Y>"
-cnoremap        <C-P> <Up>
-cnoremap        <C-N> <Down>
-
-" :nohlsearch
-nnoremap <silent> <M-U> :nohlsearch<CR>
-nnoremap coh :<C-R>=eval(&hls) ? (v:hlsearch ? 'noh' : 'set nohls') : 'set hls'<CR><CR>
+cnoremap        <M-p> <Up>
+cnoremap        <M-n> <Down>
 
 " inspect syntax
 nmap     <leader>3   <Plug>(sohi_light)
@@ -164,7 +159,11 @@ nmap     <leader>#   <Plug>(sohi_lights)
 nnoremap <M-s>       :%s/
 nnoremap <leader>s   :s/
 vnoremap <leader>s   :s/
-nnoremap c.          *Ncgn
+
+" word under cursor
+nmap     <silent> <M-u>  <Plug>(loupe_toggle_highlight)
+nmap     <silent> <M-U>  <Plug>(loupe_cword)
+nnoremap          c.     Mmz<C-O>*N`zzz<C-O>cgn
 
 " preserve flags
 nnoremap &      :&&<CR>
