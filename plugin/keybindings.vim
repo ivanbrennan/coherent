@@ -33,13 +33,20 @@ nmap     <M-p>          <Plug>(listical_previous)
 nmap     <M-h>          <Plug>(listical_older)
 nmap     <M-l>          <Plug>(listical_newer)
 
+" precise jump to mark
+nnoremap <M-'>  `
+" free up semicolon for cmdline
+nnoremap '      ;
+
 " cmdline
 noremap  ;              :
-noremap  :              ;
 noremap  <leader>x      :
 nnoremap <leader>1      :!
 nnoremap <leader>h      :help 
 nnoremap <leader><C-H>  :help <C-R><C-W>
+
+cnoremap <expr> :       coherent#cmdline_up_or(':')
+cnoremap <expr> ;       coherent#cmdline_up_or(';')
 
 cnoremap <C-A>          <Home>
 cnoremap <C-X><C-A>     <C-A>
@@ -50,7 +57,6 @@ cnoremap <C-@>          <lt>leader>
 cnoremap <C-Space>      <lt>leader>
 
 cnoremap <expr> <C-D>   getcmdpos() > strlen(getcmdline()) ? "\<C-D>" : "\<Del>"
-cnoremap <expr> :       coherent#cmdline_colon()
 
 " add blank line above / below
 nnoremap <silent> <S-CR>    :call append(line('.') - 1, '')<CR>

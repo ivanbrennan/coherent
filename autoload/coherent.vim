@@ -8,8 +8,8 @@ fun! coherent#is_search()
   return x == '/' || x == '?'
 endf
 
-func! coherent#cmdline_colon()
-  return s:cmdline_first_char() ? "\<Up>" : ":"
+func! coherent#cmdline_up_or(key)
+  return s:cmdline_first_char() ? "\<Up>" : a:key
 endf
 
 func! s:cmdline_first_char()
