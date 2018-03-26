@@ -160,10 +160,8 @@ nnoremap <M-s>       :%s/
 nnoremap <leader>s   :s/
 vnoremap <leader>s   :s/
 
-" word under cursor
-nmap     <silent> <M-u>  <Plug>(loupe_toggle_highlight)
-nmap     <silent> <M-U>  <Plug>(loupe_cword)
-nnoremap          c.     Mmz<C-O>*N`zzz<C-O>cgn
+" replace word under cursor
+nnoremap c.     Mmz<C-O>*N`zzz<C-O>cgn
 
 " preserve flags
 nnoremap &      :&&<CR>
