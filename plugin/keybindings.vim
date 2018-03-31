@@ -45,18 +45,15 @@ nnoremap <leader>1      :!
 nnoremap <leader>h      :help 
 nnoremap <leader><C-H>  :help <C-R><C-W>
 
-cnoremap <expr> :       coherent#cmdline_up_or(':')
-cnoremap <expr> ;       coherent#cmdline_up_or(';')
+cnoremap <expr> :       coherent#cmdline#if_cmd_start_maybe_visual("\<Up>", ':')
+cnoremap <expr> ;       coherent#cmdline#if_cmd_start_maybe_visual("\<Up>", ';')
 
-cnoremap <C-A>          <Home>
-cnoremap <C-X><C-A>     <C-A>
-cnoremap <C-B>          <Left>
-cnoremap <C-F>          <Right>
-cnoremap <C-X><C-F>     <C-F>
+cnoremap <expr> ls      coherent#cmdline#if_cmd_start("ls\<CR>", 'ls')
+cnoremap <expr> vs      coherent#cmdline#if_cmd_start("vs\<CR>", 'vs')
+cnoremap <expr> sp      coherent#cmdline#if_cmd_start("sp\<CR>", 'sp')
+
 cnoremap <C-@>          <lt>leader>
 cnoremap <C-Space>      <lt>leader>
-
-cnoremap <expr> <C-D>   getcmdpos() > strlen(getcmdline()) ? "\<C-D>" : "\<Del>"
 
 " add blank line above / below
 nnoremap <silent> <S-CR>    :call append(line('.') - 1, '')<CR>
@@ -85,17 +82,35 @@ vnoremap <BS>   "_d
 " start new undo-group for <C-U>
 inoremap <C-U>       <C-G>u<C-U>
 
-" touch of emacs
-inoremap <C-A>       <Home>
-inoremap <C-X><C-A>  <C-A>
-inoremap <C-B>       <C-G>U<Left>
-inoremap <C-F>       <C-G>U<Right>
-inoremap JK          <End>
-inoremap <C-D>       <Del>
-imap     <C-T>       <Plug>(vmacs_transpose_i)
-cmap     <C-T>       <Plug>(vmacs_transpose_c)
-imap     <C-A>       <Plug>(vmacs_start_of_line)
+" touch of Less & Emacs
+inoremap <M-h>       <Left>
+cnoremap <M-h>       <Left>
+inoremap <M-l>       <Right>
+cnoremap <M-l>       <Right>
 
+inoremap <M-b>       <C-O>b
+cnoremap <M-b>       <C-Left>
+inoremap <M-w>       <C-O>w
+cnoremap <M-w>       <C-Right>
+
+imap     <M-a>       <Plug>(vmacs_start_of_line)
+nmap     <M-a>       <Plug>(vmacs_start_of_line)
+xmap     <M-a>       <Plug>(vmacs_start_of_line)
+cnoremap <M-a>       <Home>
+noremap  <M-e>       <End>
+noremap! <M-e>       <End>
+
+imap     <C-t>       <Plug>(vmacs_transpose_i)
+cmap     <C-t>       <Plug>(vmacs_transpose_c)
+inoremap <C-D>       <Del>
+cnoremap <expr> <C-D> getcmdpos() > strlen(getcmdline()) ? "\<C-D>" : "\<Del>"
+
+" indent/dedent/re-indent
+inoremap <M-t>       <C-T>
+inoremap <M-d>       <C-D>
+inoremap <M-f>       <C-F>
+
+" + -
 nnoremap +           <C-A>
 xnoremap +           <C-A>
 nnoremap -           <C-X>
@@ -145,9 +160,9 @@ nnoremap U           <C-R>
 nnoremap <C-X><C-U>  U
 nnoremap <C-X>u      U
 
-cnoremap <expr> <C-P> coherent#is_search() ? "\<C-T>" : "\<Up>"
-cnoremap <expr> <C-N> coherent#is_search() ? "\<C-G>" : "\<Down>"
-cnoremap <expr> <C-Y> coherent#is_search() ? "\<C-L>" : "\<C-Y>"
+cnoremap <expr> <C-P> coherent#cmdline#if_search("\<C-T>", "\<Up>")
+cnoremap <expr> <C-N> coherent#cmdline#if_search("\<C-G>", "\<Down>")
+cnoremap <expr> <C-Y> coherent#cmdline#if_search("\<C-L>", "\<C-Y>")
 cnoremap        <M-p> <Up>
 cnoremap        <M-n> <Down>
 

@@ -3,24 +3,6 @@ let g:autoloaded_coherent = 1
 
 " map-expr helpers
 
-fun! coherent#is_search()
-  let x = getcmdtype()
-  return x == '/' || x == '?'
-endf
-
-func! coherent#cmdline_up_or(key)
-  return s:cmdline_first_char() ? "\<Up>" : a:key
-endf
-
-func! s:cmdline_first_char()
-  if getcmdtype() == ':'
-    " first column, or first column following "'<,'>" visual range
-    return getcmdpos() == 1 || (getcmdpos() == 6 && getcmdline() == "'<,'>")
-  else
-    return 0
-  endif
-endf
-
 func! coherent#expreffect(side_effect)
   exec a:side_effect
   return ''
