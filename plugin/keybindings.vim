@@ -45,12 +45,9 @@ nnoremap <leader>1      :!
 nnoremap <leader>h      :help 
 nnoremap <leader><C-H>  :help <C-R><C-W>
 
-cnoremap <expr> :       coherent#cmdline#if_cmd_start_maybe_visual("\<Up>", ':')
-cnoremap <expr> ;       coherent#cmdline#if_cmd_start_maybe_visual("\<Up>", ';')
-
-cnoremap <expr> ls      coherent#cmdline#if_cmd_start("ls\<CR>", 'ls')
-cnoremap <expr> vs      coherent#cmdline#if_cmd_start("vs\<CR>", 'vs')
-cnoremap <expr> sp      coherent#cmdline#if_cmd_start("sp\<CR>", 'sp')
+cmap     :              <Plug>(refract_colon_recall)
+cmap     ;              <Plug>(refract_semicolon_recall)
+cmap     s              <Plug>(refract_autoreturn_ls_vs)
 
 cnoremap <C-@>          <lt>leader>
 cnoremap <C-Space>      <lt>leader>
@@ -103,7 +100,7 @@ noremap! <M-e>       <End>
 imap     <C-t>       <Plug>(vmacs_transpose_i)
 cmap     <C-t>       <Plug>(vmacs_transpose_c)
 inoremap <C-D>       <Del>
-cnoremap <expr> <C-D> getcmdpos() > strlen(getcmdline()) ? "\<C-D>" : "\<Del>"
+cmap     <C-D>       <Plug>(refract_delete)
 
 " indent/dedent/re-indent
 inoremap <M-t>       <C-T>
@@ -160,9 +157,9 @@ nnoremap U           <C-R>
 nnoremap <C-X><C-U>  U
 nnoremap <C-X>u      U
 
-cnoremap <expr> <C-P> coherent#cmdline#if_search("\<C-T>", "\<Up>")
-cnoremap <expr> <C-N> coherent#cmdline#if_search("\<C-G>", "\<Down>")
-cnoremap <expr> <C-Y> coherent#cmdline#if_search("\<C-L>", "\<C-Y>")
+cmap            <C-P> <Plug>(refract_incsearch_prev)
+cmap            <C-N> <Plug>(refract_incsearch_next)
+cnoremap <expr> <C-Y> refract#if_incsearch("\<C-L>", "\<C-Y>")
 cnoremap        <M-p> <Up>
 cnoremap        <M-n> <Down>
 
