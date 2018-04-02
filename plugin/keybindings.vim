@@ -93,6 +93,10 @@ cnoremap <M-w>       <C-Right>
 imap     <M-a>       <Plug>(vmacs_start_of_line)
 nmap     <M-a>       <Plug>(vmacs_start_of_line)
 xmap     <M-a>       <Plug>(vmacs_start_of_line)
+imap     <C-A>       <Plug>(vmacs_start_of_line)
+inoremap <C-X><C-A>  <C-A>
+cnoremap <C-A>       <Home>
+cnoremap <C-X><C-A>  <C-A>
 cnoremap <M-a>       <Home>
 noremap  <M-e>       <End>
 noremap! <M-e>       <End>
