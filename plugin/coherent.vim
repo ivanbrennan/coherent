@@ -33,7 +33,7 @@ set title
 set cursorline
 set number
 set nowrap
-set showtabline=1
+set showtabline=0
 set fillchars=vert:│
 set foldmethod=syntax
 set foldlevelstart=10

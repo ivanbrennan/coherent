@@ -198,6 +198,12 @@ nnoremap <C-D>      <C-W><C-Q>
 noremap  <leader>,  <C-W>w
 noremap  <C-W><C-Y> <C-W>z
 
+" zoom
+nnoremap <C-W>O     <C-W>o
+nmap     <C-W><C-O> <Plug>(zoo)
+nmap     <C-W>o     <Plug>(zoo)
+nmap     <C-W>.     <Plug>(zoo)
+
 " tabs
 noremap <C-W><C-N> gt
 noremap <C-W><C-P> gT
