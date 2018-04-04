@@ -36,7 +36,7 @@ nmap     <M-l>          <Plug>(listical_newer)
 " precise jump to mark
 nnoremap <M-'>  `
 " free up semicolon for cmdline
-nnoremap '      ;
+noremap '       ;
 
 " cmdline
 noremap  ;              :
