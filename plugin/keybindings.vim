@@ -167,7 +167,7 @@ vnoremap >      >gv
 " emacs
 inoremap <C-S>       <C-O>/
 inoremap <C-R>       <C-O>?
-inoremap <M-R>       <C-R>
+inoremap <M-r>       <C-R>
 nnoremap U           <C-R>
 nnoremap <C-X><C-U>  U
 nnoremap <C-X>u      U
