@@ -45,7 +45,6 @@ nnoremap <leader>1      :!
 nnoremap <leader>h      :help 
 nnoremap <leader><C-H>  :help <C-R><C-W>
 
-cmap     :              <Plug>(refract_colon_recall)
 cmap     ;              <Plug>(refract_semicolon_recall)
 cmap     s              <Plug>(refract_autoreturn_ls_vs)
 
@@ -141,6 +140,16 @@ xmap     <M-,>       <Plug>(ArticulatePop)
 nmap     g.          <Plug>(ArticulateTjump)
 xmap     g.          <Plug>(ArticulateTjump)
 
+" fzf / ag
+nnoremap <silent> <M-o>         :Files<CR>
+nnoremap <silent> <M-Space>     :Ag<CR>
+nnoremap <silent> <leader>.     :Grepper<CR>
+nnoremap <silent> <leader>bi    :Buffers<CR>
+nnoremap <silent> <leader><C-R> :History/<CR>
+nnoremap <silent> <M-H>         :Helptags<CR>
+cnoremap <expr>     :   refract#if_cmd_match(['^$'], "Commands\<CR>", ':')
+cnoremap <expr>   <C-R> refract#if_cmd_match(['^$'], "History:\<CR>", "\<C-R>")
+
 " shell
 nnoremap <leader>i   <C-Z>
 
@@ -157,6 +166,8 @@ vnoremap >      >gv
 
 " emacs
 inoremap <C-S>       <C-O>/
+inoremap <C-R>       <C-O>?
+inoremap <M-R>       <C-R>
 nnoremap U           <C-R>
 nnoremap <C-X><C-U>  U
 nnoremap <C-X>u      U
