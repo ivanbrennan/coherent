@@ -28,8 +28,8 @@ nmap     <leader>u      <Plug>(dirvish_up)
 " quickfix/loclist
 nmap     <C-@>          <Plug>(listical_toggle)
 nmap     <C-Space>      <Plug>(listical_toggle)
-nmap     <M-n>          <Plug>(listical_next)
-nmap     <M-p>          <Plug>(listical_previous)
+nmap     <M-n>          <Plug>(listical_next)<Plug>(hint_highlight)
+nmap     <M-p>          <Plug>(listical_previous)<Plug>(hint_highlight)
 nmap     <M-h>          <Plug>(listical_older)
 nmap     <M-l>          <Plug>(listical_newer)
 
