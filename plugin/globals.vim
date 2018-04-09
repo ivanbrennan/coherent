@@ -6,7 +6,8 @@ let g:dirvish_mode = ':sort r /[^\/]$/'
 let g:fzf_colors =
 \ { 'prompt':  ['fg', 'LineNr'] }
 
-let g:grepper = { 'highlight': 1, 'next_tool': '<Leader><Bslash>' }
+let g:grepper =
+\ { 'highlight': 1, 'next_tool': '<Leader><Bslash>' }
 
 " Netrw & Vinegar
 let g:netrw_altfile=1           " last edited file '#'
@@ -19,7 +20,8 @@ let g:netrw_preview=1           " open previews vertically
 let g:netrw_use_errorwindow=0   " suppress error window
 let g:netrw_winsize=20          " preview winsize
 
-let g:optcycle_config = {
+let g:optcycle_config =
+\ {
 \   'colorscheme': [
 \     { 'colorscheme': 'root' },
 \     { 'colorscheme': 'moot' },
@@ -28,7 +30,8 @@ let g:optcycle_config = {
 \   ]
 \ }
 
-let g:projectionist_heuristics = {
+let g:projectionist_heuristics =
+\ {
 \   '*': {
 \     '*.c': {
 \       'alternate': '{}.h',
