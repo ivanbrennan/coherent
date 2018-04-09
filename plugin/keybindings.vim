@@ -178,6 +178,7 @@ cmap            <C-N> <Plug>(refract_incsearch_next)
 cnoremap <expr> <C-Y> refract#if_incsearch("\<C-L>", "\<C-Y>")
 cnoremap        <M-p> <Up>
 cnoremap        <M-n> <Down>
+cnoremap        <M-r> <C-R>
 
 " inspect syntax
 nmap     <leader>3   <Plug>(sohi_light)
