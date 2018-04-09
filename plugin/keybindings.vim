@@ -154,6 +154,7 @@ cnoremap <expr>   <C-R> refract#if_cmd_match(['^$'], "History:\<CR>", "\<C-R>")
 nnoremap <leader>i   <C-Z>
 
 " autocompletion
+inoremap <C-F>       <C-X><C-F>
 inoremap <C-L>       <C-X><C-L>
 inoremap <C-]>       <C-X><C-]>
 inoremap <C-@>       <C-X><C-O>
