@@ -3,6 +3,9 @@ let g:loaded_coherent_globals = 1
 
 let g:dirvish_mode = ':sort r /[^\/]$/'
 
+let g:fzf_colors =
+\ { 'prompt':  ['fg', 'LineNr'] }
+
 let g:grepper = { 'highlight': 1, 'next_tool': '<Leader><Bslash>' }
 
 " Netrw & Vinegar
