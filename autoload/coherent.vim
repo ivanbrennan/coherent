@@ -1,6 +1,12 @@
 if exists("g:autoloaded_coherent") | finish | endif
 let g:autoloaded_coherent = 1
 
+func! coherent#offset() abort
+  let [old, &scrolloff] = [&scrolloff, 6]
+  redraw
+  let &scrolloff = old
+endf
+
 " map-expr helpers
 
 func! coherent#expreffect(side_effect)

@@ -235,3 +235,6 @@ noremap <silent> gs :Gstatus<CR>
 
 " safe <CR> for use in nmap's
 nnoremap <Plug>(coherent_enter) <CR>
+
+" give scroll-offset a nudge
+nnoremap <silent> <Plug>(coherent_offset) :call coherent#offset()<CR>
