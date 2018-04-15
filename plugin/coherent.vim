@@ -40,6 +40,7 @@ set foldlevelstart=10
 set foldtext=coherent#foldtext()
 set nofoldenable
 set showcmd
+set noshowmode
 set laststatus=2
 set lazyredraw
 
