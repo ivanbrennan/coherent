@@ -10,5 +10,5 @@ let g:grepper =
 augroup CoherentSearch
   autocmd!
   autocmd User Grepper call hint#prepare_highlights()
-  autocmd User Hint,listical_next,listical_prev call latitude#nudge()
+  autocmd User Hint,listical_next,listical_prev Latitude
 augroup END
