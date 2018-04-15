@@ -1,22 +1,6 @@
 if exists("g:autoloaded_coherent") | finish | endif
 let g:autoloaded_coherent = 1
 
-func! coherent#offset() abort
-  let offset = min([6, winheight(0)/2])
-
-  let bot_want = min([offset, line('$') - line('.')])
-  let bot_have = winheight(0) - winline()
-  if bot_want > bot_have
-    exec 'normal!' (bot_want - bot_have) . "\<C-E>"
-  else
-    let top_want = min([offset, line('.') - 1])
-    let top_have = winline() - 1
-    if top_want > top_have
-      exec 'normal!' (top_want - top_have) . "\<C-Y>"
-    endif
-  endif
-endf
-
 " map-expr helpers
 
 func! coherent#expreffect(side_effect)
