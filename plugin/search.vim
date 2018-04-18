@@ -4,7 +4,7 @@ let g:loaded_coherent_search = 1
 let g:fzf_colors =
 \ { 'prompt':  ['fg', 'LineNr'] }
 
-let s:fzf_text_search_options = '--reverse --delimiter=: --nth=4..'
+let s:fzf_text_search_options = '--reverse --delimiter="\d:" --nth=3..'
 
 let s:fzf_rg_cmd = 'rg --column --line-number --no-heading --color=always '
 
