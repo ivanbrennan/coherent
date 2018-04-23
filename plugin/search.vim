@@ -4,6 +4,8 @@ let g:loaded_coherent_search = 1
 let g:fzf_colors =
 \ { 'prompt':  ['fg', 'LineNr'] }
 
+let g:fzf_files_options = substitute($FZF_CTRL_T_OPTS, '\n *', ' ', 'g')
+
 let s:fzf_text_search_options = '--reverse --delimiter="\d:" --nth=3..'
 
 let s:fzf_rg_cmd = 'rg --column --line-number --no-heading --color=always '
