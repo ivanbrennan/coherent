@@ -192,6 +192,10 @@ vnoremap <leader>s   :s/
 " replace word under cursor
 nnoremap c.     Mmz<C-O>*N`zzz<C-O>cgn
 
+" spell
+noremap  z<CR>  1z=
+nmap     zy     <Plug>(optcycle_spell+)
+
 " preserve flags
 nnoremap &      :&&<CR>
 xnoremap &      :&&<CR>
