@@ -20,8 +20,6 @@ nnoremap <leader>fs     :write<CR>
 nnoremap <leader>wq     :wq 
 nnoremap <leader>dd     :bdelete<CR>
 nnoremap <leader>dl     :bdelete#<CR>
-nnoremap <leader>bn     :bnext<CR>
-nnoremap <leader>bp     :bprevious<CR>
 nnoremap <leader>l      <C-^>
 nmap     <leader>u      <Plug>(dirvish_up)
 
@@ -144,7 +142,7 @@ xmap     g.          <Plug>(ArticulateTjump)
 nnoremap <silent> <M-o>         :Files<CR>
 nnoremap <silent> <M-Space>     :Ag<CR>
 nnoremap <silent> <leader>.     :Grepper<CR>
-nnoremap <silent> <leader>bi    :Buffers<CR>
+nnoremap <silent> <leader>b     :Buffers<CR>
 nnoremap <silent> <leader><C-R> :History/<CR>
 nnoremap <silent> <M-H>         :Helptags<CR>
 cnoremap <expr>     :   refract#if_cmd_match(['^$'], "Commands\<CR>", ':')
