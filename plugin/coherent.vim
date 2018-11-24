@@ -107,5 +107,6 @@ set wildignore+=*/tmp/librarian/*,*/.vagrant/*,*/.kitchen/*,*/vendor/cookbooks/*
 set wildignore+=*/tmp/cache/assets/*/sprockets/*,*/tmp/cache/assets/*/sass/*
 set wildignore+=*.swp,*~,._*
 set wildignore+=*.DS_Store
+set wildignore+=GPATH,GRTAGS,GTAGS
 
 set wildignorecase
