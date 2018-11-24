@@ -1,6 +1,9 @@
 if exists("g:loaded_coherent_globals") | finish | endif
 let g:loaded_coherent_globals = 1
 
+" sort directory listings like `ls -l`
+let g:dirvish_mode = ':sort ir ,/\.\?\zs[^/]\+/\?$,'
+
 " Netrw & Vinegar
 let g:netrw_altfile=1           " last edited file '#'
 let g:netrw_alto=0              " open files on right
