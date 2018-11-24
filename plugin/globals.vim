@@ -1,7 +1,7 @@
 if exists("g:loaded_coherent_globals") | finish | endif
 let g:loaded_coherent_globals = 1
 
-let g:dirvish_mode = ':sort r /[^\/]$/'
+let g:dirvish_mode = ':sort r /[^\/]\+$/'
 
 " Netrw & Vinegar
 let g:netrw_altfile=1           " last edited file '#'
