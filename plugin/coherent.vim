@@ -10,11 +10,13 @@ endif
 syntax enable
 set synmaxcol=256
 
-for dir in ['tmp', 'backup', 'undo']
-  if !isdirectory($HOME.'/.vim/'.dir)
-    call mkdir($HOME.'/.vim/'.dir, "p")
-  endif
-endfor
+if filewritable($HOME)
+  for dir in ['tmp', 'backup', 'undo']
+    if !isdirectory($HOME.'/.vim/'.dir)
+      call mkdir($HOME.'/.vim/'.dir, "p")
+    endif
+  endfor
+endif
 
 set directory=~/.vim/tmp
 set backup
