@@ -33,6 +33,9 @@ nmap     <leader><M-p>  <Plug>(listical_previous_file)<Plug>(hint_highlight)
 nmap     <M-h>          <Plug>(listical_older)
 nmap     <M-l>          <Plug>(listical_newer)
 
+" alternates
+nnoremap <leader><Tab>  :A<CR>
+
 " precise jump to mark
 nnoremap <M-'>  `
 " free up semicolon for cmdline

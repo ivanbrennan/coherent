@@ -36,6 +36,16 @@ let g:projectionist_heuristics =
 \       'alternate': '{}.c',
 \       'type': 'header'
 \     }
+\   },
+\   '*.cabal': {
+\     'src/*.hs': {
+\       'alternate': 'test/{}Spec.hs',
+\       'type': 'source'
+\     },
+\     'test/*Spec.hs': {
+\       'alternate': 'src/{}.hs',
+\       'type': 'test'
+\     }
 \   }
 \ }
 
