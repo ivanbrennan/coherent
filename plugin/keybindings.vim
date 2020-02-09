@@ -154,7 +154,20 @@ cnoremap <expr>     :   refract#if_cmd_match(['^$'], "Commands\<CR>", ':')
 cnoremap <expr>   <C-R> refract#if_cmd_match(['^$'], "History:\<CR>", "\<C-R>")
 
 " shell
-nnoremap <leader>i   <C-Z>
+nmap     <leader>i   <C-Z>
+if executable("xsel")
+  func! PreserveClipboard()
+    call system("xsel --input --clipboard", getreg("+"))
+  endf
+
+  func! PreserveClipboadAndSuspend()
+    call PreserveClipboard()
+    suspend
+  endf
+
+  autocmd VimLeave * call PreserveClipboard()
+  nnoremap <silent> <C-Z> :call PreserveClipboadAndSuspend()<CR>
+endif
 
 " autocompletion
 inoremap <C-F>       <C-X><C-F>
