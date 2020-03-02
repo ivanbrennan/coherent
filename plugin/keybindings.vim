@@ -24,8 +24,7 @@ nnoremap <leader>l      <C-^>
 nmap     <leader>u      <Plug>(dirvish_up)
 
 " quickfix/loclist
-nmap     <C-@>          <Plug>(listical_toggle)
-nmap     <C-Space>      <Plug>(listical_toggle)
+nmap     <S-Space>      <Plug>(listical_toggle)
 nmap     <M-n>          <Plug>(listical_next)<Plug>(hint_highlight)
 nmap     <leader><M-n>  <Plug>(listical_next_file)<Plug>(hint_highlight)
 nmap     <M-p>          <Plug>(listical_previous)<Plug>(hint_highlight)
@@ -145,7 +144,8 @@ xmap     g.          <Plug>(ArticulateTjump)
 
 " fzf / ag
 nnoremap <silent> <M-o>         :Files<CR>
-nnoremap <silent> <S-Space>     :Ag<CR>
+nnoremap <silent> <C-@>         :Ag<CR>
+nnoremap <silent> <C-Space>     :Ag<CR>
 nnoremap <silent> <leader>.     :Grepper<CR>
 nnoremap <silent> <leader>b     :Buffers<CR>
 nnoremap <silent> <leader><C-R> :History/<CR>
