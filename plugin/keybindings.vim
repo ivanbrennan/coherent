@@ -145,7 +145,7 @@ xmap     g.          <Plug>(ArticulateTjump)
 
 " fzf / ag
 nnoremap <silent> <M-o>         :Files<CR>
-nnoremap <silent> <S-Space>     :Ag<CR>
+nnoremap <silent> <M-f>         :Ag<CR>
 nnoremap <silent> <leader>.     :Grepper<CR>
 nnoremap <silent> <leader>b     :Buffers<CR>
 nnoremap <silent> <leader><C-R> :History/<CR>
