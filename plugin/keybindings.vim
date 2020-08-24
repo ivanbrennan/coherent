@@ -24,8 +24,7 @@ nnoremap <leader>l      <C-^>
 nmap     <leader>u      <Plug>(dirvish_up)
 
 " quickfix/loclist
-nmap     <C-@>          <Plug>(listical_toggle)
-nmap     <C-Space>      <Plug>(listical_toggle)
+nmap     <leader><CR>   <Plug>(listical_toggle)
 nmap     <M-n>          <Plug>(listical_next)<Plug>(hint_highlight)
 nmap     <leader><M-n>  <Plug>(listical_next_file)<Plug>(hint_highlight)
 nmap     <M-p>          <Plug>(listical_previous)<Plug>(hint_highlight)
@@ -50,9 +49,6 @@ nnoremap <leader><C-H>  :help <C-R><C-W>
 
 cmap     ;              <Plug>(refract_semicolon_recall)
 cmap     s              <Plug>(refract_autoreturn_ls_vs)
-
-cnoremap <C-@>          <lt>leader>
-cnoremap <C-Space>      <lt>leader>
 
 " add blank line above / below
 nnoremap <silent> <S-CR>    :call append(line('.') - 1, '')<CR>
@@ -173,8 +169,6 @@ endif
 inoremap <C-F>       <C-X><C-F>
 inoremap <C-L>       <C-X><C-L>
 inoremap <C-]>       <C-X><C-]>
-inoremap <C-@>       <C-X><C-O>
-inoremap <C-Space>   <C-X><C-O>
 
 " indentation
 vnoremap <Tab>  =
