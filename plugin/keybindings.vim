@@ -138,6 +138,7 @@ nmap     <C-,>       <Plug>(ArticulatePop)
 xmap     <C-,>       <Plug>(ArticulatePop)
 nmap     g.          <Plug>(ArticulateTjump)
 xmap     g.          <Plug>(ArticulateTjump)
+nmap     g<Space>    :tjump 
 
 " fzf / ag
 nnoremap <silent> <M-o>         :Files<CR>
