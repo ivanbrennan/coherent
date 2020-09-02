@@ -25,12 +25,12 @@ nmap     <leader>u      <Plug>(dirvish_up)
 
 " quickfix/loclist
 nmap     <leader><Space> <Plug>(listical_toggle)
-nmap     <M-n>          <Plug>(listical_next)<Plug>(hint_highlight)
-nmap     <leader><M-n>  <Plug>(listical_next_file)<Plug>(hint_highlight)
-nmap     <M-p>          <Plug>(listical_previous)<Plug>(hint_highlight)
-nmap     <leader><M-p>  <Plug>(listical_previous_file)<Plug>(hint_highlight)
-nmap     <M-h>          <Plug>(listical_older)
-nmap     <M-l>          <Plug>(listical_newer)
+nmap     <M-n>           <Plug>(listical_next)<Plug>(hint_highlight)
+nmap     <M-N>           <Plug>(listical_next_file)<Plug>(hint_highlight)
+nmap     <M-p>           <Plug>(listical_previous)<Plug>(hint_highlight)
+nmap     <M-P>           <Plug>(listical_previous_file)<Plug>(hint_highlight)
+nmap     <M-h>           <Plug>(listical_older)
+nmap     <M-l>           <Plug>(listical_newer)
 
 " alternates
 nnoremap <leader><Tab>  :A<CR>
