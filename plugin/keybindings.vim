@@ -24,7 +24,7 @@ nnoremap <leader>l      <C-^>
 nmap     <leader>u      <Plug>(dirvish_up)
 
 " quickfix/loclist
-nmap     <leader><CR>   <Plug>(listical_toggle)
+nmap     <leader><Space> <Plug>(listical_toggle)
 nmap     <M-n>          <Plug>(listical_next)<Plug>(hint_highlight)
 nmap     <leader><M-n>  <Plug>(listical_next_file)<Plug>(hint_highlight)
 nmap     <M-p>          <Plug>(listical_previous)<Plug>(hint_highlight)
