@@ -56,12 +56,12 @@ nnoremap <silent> <C-CR>    :call append(line('.'), '')<CR>
 nnoremap <silent> <M-CR>    :call append(line('.'), '')<CR>
 
 " bubble up / down
-nnoremap <silent> <M-K>     mZ:silent! move .-2<CR>==`Z
-vnoremap <silent> <M-K>     :<C-U>silent! '<,'>move '<-2<CR>gv=gv
-inoremap <silent> <M-K>     <Esc>:silent! move .-2<CR>==gi
-nnoremap <silent> <M-J>     mZ:silent! move .+1<CR>==`Z
-vnoremap <silent> <M-J>     :<C-U>silent! '<,'>move '>+1<CR>gv=gv
-inoremap <silent> <M-J>     <Esc>:silent! move .+1<CR>==gi
+nnoremap <silent> <C-Up>    mZ:silent! move .-2<CR>==`Z
+vnoremap <silent> <C-Up>    :<C-U>silent! '<,'>move '<-2<CR>gv=gv
+inoremap <silent> <C-Up>    <Esc>:silent! move .-2<CR>==gi
+nnoremap <silent> <C-Down>  mZ:silent! move .+1<CR>==`Z
+vnoremap <silent> <C-Down>  :<C-U>silent! '<,'>move '>+1<CR>gv=gv
+inoremap <silent> <C-Down>  <Esc>:silent! move .+1<CR>==gi
 
 " spawn newline
 inoremap <S-CR> <C-O>O
