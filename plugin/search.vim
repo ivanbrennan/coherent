@@ -10,6 +10,12 @@ let s:fzf_text_search_options = '--reverse --delimiter="\d:" --nth=3..'
 
 let s:fzf_rg_cmd = 'rg --column --line-number --no-heading --color=always '
 
+" The default is a popup window, which looks cool, but has some issues,
+" such as breaking alt bindings (--bind=alt-p:previous-history) and causing
+" the cursor to jump to the top of the file if projectionist is enabled.
+" https://github.com/junegunn/fzf.vim/issues/1164
+let g:fzf_layout = { 'down': '50%' }
+
 " Default options passed to ag: --nogroup --column --color
 " Further options can be passed to fzf#vim#ag() as a second argument, e.g.
 "   fzf#vim#ag(<q-args>, '--nocolor', <bang>0 ? ... : ..., <bang>0)
@@ -38,7 +44,7 @@ func! s:fzf_preview_small()
   return fzf#vim#with_preview(
   \ {'options': s:fzf_text_search_options},
   \ 'right:50%:hidden',
-  \ '?')
+  \ 'ctrl-h')
 endf
 
 let g:grepper =
