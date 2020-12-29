@@ -30,8 +30,10 @@ command! -bang -nargs=* Ag
 \   <bang>0
 \ )
 
-let g:grepper =
-\ { 'next_tool': '<Bslash><Bslash>' }
+let g:grepper = {
+\   'prompt_mapping_tool': '<C-.>',
+\   'tools': ['ag', 'rg', 'git', 'grep']
+\ }
 
 augroup CoherentSearch
   autocmd!
