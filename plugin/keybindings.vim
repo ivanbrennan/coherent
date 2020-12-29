@@ -143,10 +143,11 @@ nmap     g<Space>    :tjump
 
 " fzf / ag
 nnoremap <silent> <M-o>         :Files<CR>
-nnoremap <silent> <M-f>         :Ag<CR>
+nnoremap <silent> <leader>fo    :Files<CR>
+nnoremap <silent> <leader>a     :Ag<CR>
 nnoremap <silent> <leader>.     :Grepper<CR>
 nnoremap <silent> <leader>b     :Buffers<CR>
-nnoremap <silent> <leader><C-R> :History/<CR>
+nnoremap <silent> <leader>fh    :History/<CR>
 nnoremap <silent> <M-H>         :Helptags<CR>
 cnoremap <expr>     :   refract#if_cmd_match(['^$'], "Commands\<CR>", ':')
 cnoremap <expr>   <C-R> refract#if_cmd_match(['^$'], "History:\<CR>", "\<C-R>")
