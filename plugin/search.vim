@@ -21,7 +21,7 @@ command! -bang -nargs=* Ag
 \       'options': [
 \         '--reverse',
 \         '--delimiter', ':',
-\         '--nth', '4'
+\         '--nth', '4..'
 \       ]
 \     },
 \     s:fzf_preview_window,
