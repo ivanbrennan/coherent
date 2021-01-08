@@ -54,8 +54,8 @@ set sidescroll=2
 set mouse+=a
 set guioptions-=L
 set guioptions-=r
-set splitright
-set splitbelow
+set nosplitright
+set nosplitbelow
 
 set backspace=indent,eol,start
 set nojoinspaces
