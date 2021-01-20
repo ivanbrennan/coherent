@@ -100,7 +100,7 @@ noremap  <M-e>       <End>
 noremap! <M-e>       <End>
 cnoremap <C-B>       <Left>
 cnoremap <C-F>       <Right>
-exe      "set cedit=\<C-G>"
+exe      "set cedit=\<C-O>"
 
 imap     <C-t>       <Plug>(vmacs_transpose_i)
 cmap     <C-t>       <Plug>(vmacs_transpose_c)
