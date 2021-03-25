@@ -147,7 +147,7 @@ nmap     g<Space>    :tjump
 " fzf / ag
 nnoremap <silent> <M-o>         :Files<CR>
 nnoremap <silent> <leader>fo    :Files<CR>
-nnoremap <silent> <leader>a     :Ag<CR>
+nnoremap <silent> <leader>/     :Ag<CR>
 nnoremap <silent> <leader>.     :Grepper<CR>
 nnoremap <silent> <leader>b     :Buffers<CR>
 nnoremap <silent> <leader>fh    :History/<CR>
