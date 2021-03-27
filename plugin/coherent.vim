@@ -84,7 +84,7 @@ silent! set formatoptions+=j  " let J handle comments if supported
 
 augroup Formatting
   autocmd!
-  autocmd FileType * execute 'setl formatprg=par\ -w'.(&tw > 0 ? &tw : 90)
+  autocmd FileType * execute 'setl formatprg=par\ -w'.(&tw > 0 ? &tw : 80)
 augroup END
 
 if exists('&guifont')
