@@ -56,6 +56,7 @@ set guioptions-=L
 set guioptions-=r
 set nosplitright
 set nosplitbelow
+set nostartofline
 
 set backspace=indent,eol,start
 set nojoinspaces
