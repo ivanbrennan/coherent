@@ -233,7 +233,8 @@ noremap  <leader>,  <C-W>w
 noremap  <C-W><C-Y> <C-W>z
 
 " zoom
-nmap     <C-W>.     <Plug>(zoo)
+nmap     <C-W>.        <Plug>(zoo)
+nnoremap <C-W><Bslash> <C-W><Bar>
 
 " tabs
 noremap <C-W><C-N> gt
