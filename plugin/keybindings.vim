@@ -156,6 +156,18 @@ nnoremap <silent> <M-H>         :Helptags<CR>
 cnoremap <expr>     :   refract#if_cmd_match(['^$'], "Commands\<CR>", ':')
 cnoremap <expr>   <C-R> refract#if_cmd_match(['^$'], "History:\<CR>", "\<C-R>")
 
+" terminal-special-keys
+func! SendToTerm(keys)
+  call term_sendkeys('', a:keys)
+  return ''
+endf
+tnoremap <expr> <M-b> SendToTerm("\<Esc>b")
+tnoremap <expr> <M-d> SendToTerm("\<Esc>d")
+tnoremap <expr> <M-f> SendToTerm("\<Esc>f")
+tnoremap <expr> <M-n> SendToTerm("\<Esc>n")
+tnoremap <expr> <M-p> SendToTerm("\<Esc>p")
+tnoremap <expr> <M-t> SendToTerm("\<Esc>t")
+
 " shell
 nmap     <leader>i   <C-Z>
 if executable("xsel")
