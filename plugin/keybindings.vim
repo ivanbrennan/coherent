@@ -87,6 +87,7 @@ inoremap <M-b>       <C-O>b
 cnoremap <M-b>       <C-Left>
 inoremap <M-w>       <C-O>w
 cnoremap <M-w>       <C-Right>
+cnoremap <M-f>       <C-Right>
 
 imap     <M-a>       <Plug>(vmacs_start_of_line)
 nmap     <M-a>       <Plug>(vmacs_start_of_line)
