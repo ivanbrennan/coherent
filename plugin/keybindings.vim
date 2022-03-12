@@ -157,6 +157,9 @@ nnoremap <silent> <M-H>         :Helptags<CR>
 cnoremap <expr>     :   refract#if_cmd_match(['^$'], "Commands\<CR>", ':')
 cnoremap <expr>   <C-R> refract#if_cmd_match(['^$'], "History:\<CR>", "\<C-R>")
 
+" terminal keys
+tnoremap <C-w>; <C-w>:
+
 " terminal-special-keys
 func! SendToTerm(keys)
   call term_sendkeys('', a:keys)
