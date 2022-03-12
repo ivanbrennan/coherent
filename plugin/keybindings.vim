@@ -265,8 +265,8 @@ nnoremap <C-U><C-L>    zt
 nnoremap <leader><C-L> <C-L>
 
 " git
-noremap <silent> gb :Gblame<CR>
-noremap <silent> gs :Gstatus<CR>
+noremap <silent> gb :Git blame<CR>
+noremap <silent> gs :Git<CR>
 
 " safe <CR> for use in nmap's
 nnoremap <Plug>(coherent_enter) <CR>
