@@ -1,7 +1,7 @@
 if exists("g:loaded_coherent_search") | finish | endif
 let g:loaded_coherent_search = 1
 
-let g:fzf_colors = { 'prompt':  ['fg', 'LineNr'] }
+let g:fzf_colors = { 'prompt':  ['fg', 'LineNr'], 'border': ['bg', 'Terminal'] }
 
 let s:fzf_preview_window = 'right:50%:hidden:+{2}-/2'
 let s:fzf_preview_toggle = 'ctrl-h'
