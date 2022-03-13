@@ -22,6 +22,7 @@ nnoremap <leader>dd     :bdelete<CR>
 nnoremap <leader>dl     :bdelete#<CR>
 nnoremap <leader>l      <C-^>
 nmap     <leader>u      <Plug>(dirvish_up)
+nnoremap <leader>F :setf 
 
 " quickfix/loclist
 nmap     <leader><Space> <Plug>(listical_toggle)
