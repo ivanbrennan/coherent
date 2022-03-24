@@ -1,6 +1,9 @@
 if exists("g:loaded_coherent_globals") | finish | endif
 let g:loaded_coherent_globals = 1
 
+" truncate git branch name in statusline
+let g:mline_branch_maxwidth = 20
+
 " sort directory listings like `ls -l`
 let g:dirvish_mode = ':sort ir ,/\.\?\zs[^/]\+/\?$,'
 
