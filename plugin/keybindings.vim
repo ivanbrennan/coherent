@@ -269,5 +269,9 @@ nnoremap <leader><C-L> <C-L>
 noremap <silent> gb :Git blame<CR>
 noremap <silent> gs :Git<CR>
 
+" clever-f, https://github.com/vim/vim/issues/390#issuecomment-531477332
+set t_u7=
+nnoremap <Esc> :<C-u>call clever_f#reset()<CR>
+
 " safe <CR> for use in nmap's
 nnoremap <Plug>(coherent_enter) <CR>
