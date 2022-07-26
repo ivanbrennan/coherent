@@ -26,10 +26,10 @@ nnoremap <leader>F :setf
 
 " quickfix/loclist
 nmap     <leader><Space> <Plug>(listical_toggle)
-nmap     <M-n>           <Plug>(listical_next)<Plug>(hint_highlight)
-nmap     <M-N>           <Plug>(listical_next_file)<Plug>(hint_highlight)
-nmap     <M-p>           <Plug>(listical_previous)<Plug>(hint_highlight)
-nmap     <M-P>           <Plug>(listical_previous_file)<Plug>(hint_highlight)
+nmap     <M-n>           <Plug>(listical_next)<Plug>
+nmap     <M-N>           <Plug>(listical_next_file)<Plug>
+nmap     <M-p>           <Plug>(listical_previous)<Plug>
+nmap     <M-P>           <Plug>(listical_previous_file)<Plug>
 nmap     <M-h>           <Plug>(listical_older)
 nmap     <M-l>           <Plug>(listical_newer)
 
@@ -269,9 +269,10 @@ nnoremap <leader><C-L> <C-L>
 noremap <silent> gb :Git blame<CR>
 noremap <silent> gs :Git<CR>
 
-" clever-f, https://github.com/vim/vim/issues/390#issuecomment-531477332
-set t_u7=
-nnoremap <Esc> :<C-u>call clever_f#reset()<CR>
+" clever-f / hint
+nnoremap <silent> <unique> <expr> <M-u>
+\ hint#is_highlighted() ? ":call hint#clear_highlight()\<CR>"
+\                       : ":call clever_f#reset()\<CR>"
 
 " safe <CR> for use in nmap's
 nnoremap <Plug>(coherent_enter) <CR>
