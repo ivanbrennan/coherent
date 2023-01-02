@@ -22,6 +22,7 @@ let g:optcycle_config =
 \ {
 \   'colorscheme': [
 \     { 'colorscheme': 'root' },
+\     { 'colorscheme': 'wool' },
 \     { 'colorscheme': 'moot' },
 \     { 'colorscheme': 'ion' },
 \     { 'colorscheme': 'blight' }

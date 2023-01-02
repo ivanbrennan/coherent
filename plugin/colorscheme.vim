@@ -53,6 +53,6 @@ if !exists('g:colors_name')
   if $THEME == 'light'
     colorscheme blight
   else
-    colorscheme moot
+    colorscheme wool
   endif
 endif
