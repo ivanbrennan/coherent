@@ -269,10 +269,8 @@ nnoremap <leader><C-L> <C-L>
 noremap <silent> gb :Git blame<CR>
 noremap <silent> gs :Git<CR>
 
-" clever-f / hint
-nnoremap <silent> <unique> <expr> <M-u>
-\ hint#is_highlighted() ? ":call hint#clear_highlight()\<CR>"
-\                       : ":call clever_f#reset()\<CR>"
+" hint
+nnoremap <M-u> <Plug>(hint_toggle_highlight)
 
 " safe <CR> for use in nmap's
 nnoremap <Plug>(coherent_enter) <CR>
